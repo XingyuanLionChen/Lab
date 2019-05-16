@@ -10,6 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".service.ServiceActivity"></activity>
         <activity android:name=".base.BaseActivity" />
         <activity android:name=".main.MainActivity">
             <intent-filter>
@@ -19,6 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service android:name=".service.LabService" />
     </application>
 
 </manifest>

@@ -11,6 +11,7 @@ import com.lion.lab.R;
 import com.lion.lab.base.BaseActivity;
 import com.lion.lab.common.adapter.CommonRecyclerViewAdapter;
 import com.lion.lab.common.viewholder.ViewHolder;
+import com.lion.lab.service.ServiceActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +26,7 @@ public class MainActivity extends BaseActivity {
         ViewHolder viewHolder = new ViewHolder(getWindow().getDecorView());
 
         List<Lab> labs = new ArrayList<>();
+        labs.add(new Lab("service", ServiceActivity.class));
 
         View.OnClickListener onClickListener =
                 v -> startActivity(new Intent(MainActivity.this, ((Lab) v.getTag()).getClazz()));

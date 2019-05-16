@@ -1,9 +1,9 @@
 package com.lion.lab.base;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.app.Service;
 
 import com.lion.lab.app.Constants;
 
-public class BaseActivity extends AppCompatActivity {
+public abstract class BaseService extends Service {
     protected static final String TAG = Constants.TAG;
 }
