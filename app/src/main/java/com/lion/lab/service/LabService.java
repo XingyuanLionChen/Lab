@@ -18,7 +18,7 @@ public class LabService extends BaseService {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Log.d(TAG, intent.getStringExtra("test"));
+        Log.d(TAG, "onStartCommand");
         return super.onStartCommand(intent, flags, startId);
     }
 
@@ -27,5 +27,17 @@ public class LabService extends BaseService {
     public IBinder onBind(Intent intent) {
         Log.d(TAG, "onBind");
         return null;
+    }
+
+    @Override
+    public boolean onUnbind(Intent intent) {
+        Log.d(TAG, "onUnbind");
+        return super.onUnbind(intent);
+    }
+
+    @Override
+    public void onDestroy() {
+        Log.d(TAG, "onDestroy");
+        super.onDestroy();
     }
 }
