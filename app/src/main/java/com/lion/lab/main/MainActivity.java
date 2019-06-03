@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.lion.lab.R;
 import com.lion.lab.base.BaseActivity;
+import com.lion.lab.binder.BinderActivity;
 import com.lion.lab.common.adapter.CommonRecyclerViewAdapter;
 import com.lion.lab.common.viewholder.ViewHolder;
 import com.lion.lab.service.ServiceActivity;
@@ -27,6 +28,7 @@ public class MainActivity extends BaseActivity {
 
         List<Lab> labs = new ArrayList<>();
         labs.add(new Lab("service", ServiceActivity.class));
+        labs.add(new Lab("binder", BinderActivity.class));
 
         View.OnClickListener onClickListener =
                 v -> startActivity(new Intent(MainActivity.this, ((Lab) v.getTag()).getClazz()));
