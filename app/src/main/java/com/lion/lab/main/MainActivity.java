@@ -14,6 +14,9 @@ import com.lion.lab.common.adapter.CommonRecyclerViewAdapter;
 import com.lion.lab.common.viewholder.ViewHolder;
 import com.lion.lab.custom_view.CustomViewActivity;
 import com.lion.lab.fresco.FrescoActivity;
+import com.lion.lab.http.HttpActivity;
+import com.lion.lab.screen_support.ScreenSupportActivity;
+import com.lion.lab.scroll_conflict.ScrollConflictActivity;
 import com.lion.lab.service.ServiceActivity;
 
 import java.util.ArrayList;
@@ -33,6 +36,9 @@ public class MainActivity extends BaseActivity {
         labs.add(new Lab("binder", BinderActivity.class));
         labs.add(new Lab("fresco", FrescoActivity.class));
         labs.add(new Lab("customView", CustomViewActivity.class));
+        labs.add(new Lab("scrollConflict", ScrollConflictActivity.class));
+        labs.add(new Lab("http", HttpActivity.class));
+        labs.add(new Lab("screenSupport", ScreenSupportActivity.class));
 
         View.OnClickListener onClickListener =
                 v -> startActivity(new Intent(MainActivity.this, ((Lab) v.getTag()).getClazz()));

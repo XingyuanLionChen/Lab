@@ -6,25 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".custom_view.CustomViewActivity">
 
-    <com.lion.lab.custom_view.CustomViewGroup
-        android:id="@+id/cvg"
+    <com.lion.lab.custom_view.BottomBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent">
 
-        <TextView
+        <com.lion.lab.custom_view.CustomView
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:gravity="center"
-            android:text="@string/app_name"
-            android:textSize="16sp" />
+            android:layout_height="wrap_content" />
 
-        <TextView
+        <com.lion.lab.custom_view.CustomView
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:gravity="center"
-            android:text="@string/app_name"
-            android:textSize="16sp" />
-    </com.lion.lab.custom_view.CustomViewGroup>
+            android:layout_height="wrap_content" />
+    </com.lion.lab.custom_view.BottomBar>
 </androidx.constraintlayout.widget.ConstraintLayout>
